@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular o DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Como Posso encontrar elementos</h1>
+    <ul>
+        <li>
+            <h2>Pela Tag</h2>
+            <p class="titulo">Usando o "document.getElementsByTagName()"</p>
+            <p>Ele retorna um array com todos elementos que possuem o nome de tag citado.</p>
+            <p>Por exemplo: </p>
+            <hr>
+
+            <p>Se você clicar no botão abaixo: o Java será pintado de azul, o fundo do Python de vermelho e o NodeJs
+                virará
+                SpringBoot</p>
+            <button onclick="tagEx()">Exemplo</button><br><br>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>NodeJs</li>
+            </ul>
+            <hr>
+            <p>
+                Sintaxe:<br><br>
+                element = document.getElementsByTagName('li')[1]<br>
+                element.style.color = 'blue';<br><br>
+
+                element = document.getElementsByTagName('li')[2]<br>
+                element.style.background = 'red';<br><br>
+
+                element = document.getElementsByTagName('li')[3]<br>
+                element.innerText = "SpringBoot";<br><br>
+            </p>
+            <hr>
+        </li>
+
+        <li>
+            <h2>Pelo Id</h2>
+            <p class="titulo">Usando o "document.getElementById()"</p>
+            <p>Ele retorna o elemento pelo id citado.</p>
+            <p>Por exemplo: </p>
+            <hr>
+
+            <p>Se você clicar no botão abaixo: o Java será pintado de azul, o fundo do Python de vermelho e o NodeJs
+                virará
+                SpringBoot</p>
+            <button onclick="tagId()">Exemplo</button><br><br>
+            <ul>
+                <li id="java">Java</li>
+                <li id="python">Python</li>
+                <li id="nodejs">NodeJs</li>
+            </ul>
+            <hr>
+            <p>
+                Sintaxe:<br><br>
+                element = document.getElementById("java")<br>
+                element.style.color = 'blue';<br><br>
+
+                element = document.getElementById("python");<br>
+                element.style.background = 'red';<br><br>
+
+                element = document.getElementById("nodejs");<br>
+                element.innerText = "SpringBoot";<br><br>
+            </p>
+            <hr>
+        </li>
+
+        <li>
+            <h2>Pelo Name</h2>
+            <p class="titulo">Usando o "document.getElementByName()"</p>
+            <p>Ele retorna um Array com os elementos com aquele nome, sendo necessário indicar a posição, assim como no
+                getElementsByTagName.</p>
+            <p>Por exemplo: </p>
+            <hr>
+
+            <p>Se você clicar no botão abaixo: o Java será pintado de azul, o fundo do Python de vermelho e o NodeJs
+                virará
+                SpringBoot</p>
+            <button onclick="_tagName()">Exemplo</button><br><br>
+            <ul>
+                <li name="java">Java</li>
+                <li name="python">Python</li>
+                <li name="nodejs">NodeJs</li>
+            </ul>
+            <hr>
+            <p>
+                Sintaxe:<br><br>
+                element = document.getElementsByName("java")[0]<br>
+                element.style.color = 'blue';<br><br>
+
+                element = document.getElementsByName("python")[0]<br>
+                element.style.background = 'red';<br><br>
+
+                element = document.getElementsByName("nodejs")[0]<br>
+                element.innerText = "SpringBoot";<br><br>
+            </p>
+            <hr>
+        </li>
+
+        <li>
+            <h2>Pela Classe</h2>
+            <p class="titulo">Usando o "document.getElementsByClassName()"</p>
+            <p>Ele retorna um Array com os elementos pertencentes aquela classe, sendo necessário indicar a posição,
+                assim como no getElementsByTagName e o getElementsByName.</p>
+            <p>Por exemplo: </p>
+            <hr>
+
+            <p>Se você clicar no botão abaixo: o Java será pintado de azul, o fundo do Python de vermelho e o NodeJs
+                virará
+                SpringBoot</p>
+            <button onclick="tagClass()">Exemplo</button><br><br>
+            <ul>
+                <li class="langs">Java</li>
+                <li class="langs">Python</li>
+                <li class="langs">NodeJs</li>
+            </ul>
+            <hr>
+            <p>
+                Sintaxe:<br><br>
+                element = document.getElementsByClassName('langs')[0]<br>
+                element.style.color = 'blue';<br><br>
+
+                element = document.getElementsByClassName('langs')[1]<br>
+                element.style.background = 'red';<br><br>
+
+                element = document.getElementsByClassName('langs')[2]<br>
+                element.innerText = "SpringBoot";<br><br>
+            </p>
+            <hr>
+        </li>
+
+        <li>
+            <h2>Pelo seletor do CSS</h2>
+            <p class="titulo">Usando o "document.querySelectorAll("--caminho--")"</p>
+            <p>Ele retorna um array dos elementos que pertencem ao caminho indicado. Este em especial tem potencial para
+                ser explorado a fundo podendo chamar os elementos pelo #id ou .class e assim sucessivamente.</p>
+            <p>Por exemplo: </p>
+            <hr>
+
+            <p>Se você clicar no botão abaixo: o Java será pintado de azul, o fundo do Python de vermelho e o NodeJs
+                virará
+                SpringBoot</p>
+            <button onclick="_qSelector()">Exemplo</button><br><br>
+            <ul>
+                <li class="exSelector">Java</li>
+                <li class="exSelector">Python</li>
+                <li class="exSelector">NodeJs</li>
+            </ul>
+            <hr>
+            <p>
+                Sintaxe:<br><br>
+                let element = document.querySelectorAll('.exSelector');<br><br>
+
+                element[0].style.color = 'blue';<br>
+
+                element[1].style.background = 'red';<br>
+
+                element[2].innerText = "SpringBoot";<br>
+            </p>
+            <hr>
+        </li>
+    </ul>
+
+</body>
+<script src="script.js"></script>
+
+
+</html>
